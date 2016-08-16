@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFApp1.MainPage"
+             Padding="30" BackgroundColor="White">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Orientation="Vertical" Spacing="10">
+
+    <Label Text="FontAwesome" />
+    <Label Text="&#xF099; &#xf230; &#xf09b; &#xf179; &#xf17b; &#xf17a;" FontSize="24">
+      <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String"
+                    iOS="FontAwesome"
+                    Android="Fonts/FontAwesome.otf"
+                    WinPhone="Assets/Fonts/FontAwesome.otf#FontAwesome">
+        </OnPlatform>
+      </Label.FontFamily>
+    </Label>
+
+    <Label Text="Segoe MDL2 Assets" Margin="0,20,0,0" />
+    <Label Text="&#xE8FA; &#xE8E1; &#xE74E; &#xE907; &#xE909; &#xE8A3;" FontSize="24">
+      <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String"
+                    iOS="Segoe MDL2 Assets"
+                    Android="Fonts/segmdl2.ttf"
+                    WinPhone="Segoe MDL2 Assets">
+        </OnPlatform>
+      </Label.FontFamily>
+    </Label>
+
+  </StackLayout>
+
+</ContentPage>
