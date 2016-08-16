@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFApp1"
+             x:Class="XFApp1.MainPage" Title="Settings" x:Name="root">
+  <ContentPage.BindingContext>
+    <local:MainPageViewModel />
+  </ContentPage.BindingContext>
+  <TableView Intent="Settings">
+    <TableRoot>
+      <TableSection Title="アカウント" local:CollectionBindings.ItemsSource="{Binding Accounts}">
+        <local:CollectionBindings.ItemTemplate>
+          <DataTemplate>
+            <TextCell Text="{Binding Name}" Detail="{Binding Text}" />
+          </DataTemplate>
+        </local:CollectionBindings.ItemTemplate>
+        <TextCell Text="アカウントを追加" Command="{Binding Source={x:Reference root}, Path=BindingContext.AddCommand}" />
+      </TableSection>
+    </TableRoot>
+  </TableView>
+</ContentPage>
