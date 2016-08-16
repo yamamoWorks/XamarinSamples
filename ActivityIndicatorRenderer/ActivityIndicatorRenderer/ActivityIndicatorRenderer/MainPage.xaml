@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActivityIndicatorRenderer.MainPage">
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <ActivityIndicator x:Name="ai1" BindingContext="{x:Reference Name=sw1}" IsRunning="{Binding IsToggled}" />
+    <StackLayout Orientation="Horizontal" Padding="20">
+      <Switch x:Name="sw1" IsToggled="True" />
+      <Picker x:Name="pk1" WidthRequest="70">
+        <Picker.Items>
+          <x:String>Default</x:String>
+          <x:String>Blue</x:String>
+          <x:String>Lime</x:String>
+          <x:String>Purple</x:String>
+          <x:String>Green</x:String>
+          <x:String>Yellow</x:String>
+          <x:String>Red</x:String>
+        </Picker.Items>
+      </Picker>
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>
