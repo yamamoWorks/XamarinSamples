@@ -1,20 +1,15 @@
 ﻿using ActivityIndicatorRenderer.UWP;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
-[assembly: ExportRenderer(typeof(ActivityIndicator), typeof(CustomActivityIndicatorRenderer))]
+[assembly: ExportRenderer(typeof(ActivityIndicator), typeof(RingActivityIndicatorRenderer))]
 
 namespace ActivityIndicatorRenderer.UWP
 {
-    public class CustomActivityIndicatorRenderer : ViewRenderer<ActivityIndicator, Windows.UI.Xaml.Controls.ProgressRing>
+    public class RingActivityIndicatorRenderer : ViewRenderer<ActivityIndicator, Windows.UI.Xaml.Controls.ProgressRing>
     {
         private Brush foregroundDefault;
 
