@@ -15,8 +15,8 @@ namespace XFApp1.iOS
         public override UITableViewCell GetCell(Cell item, UITableViewCell reusableCell, UITableView tv)
         {
             var cell = base.GetCell(item, reusableCell, tv);
-            cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;            
-            return cell; 
+            cell.Accessory = (UITableViewCellAccessory)TextCellExtention.GetAccessory(item);
+            return cell;
         }
     }
 }

@@ -11,7 +11,8 @@
       <TableSection Title="アカウント" local:CollectionBindings.ItemsSource="{Binding Accounts}">
         <local:CollectionBindings.ItemTemplate>
           <DataTemplate>
-            <TextCell Text="{Binding Name}" Detail="{Binding Text}" />
+            <TextCell Text="{Binding Name}" Detail="{Binding Text}"
+                      local:TextCellExtention.Accessory="DisclosureIndicator" />
           </DataTemplate>
         </local:CollectionBindings.ItemTemplate>
         <TextCell Text="アカウントを追加" Command="{Binding Source={x:Reference root}, Path=BindingContext.AddCommand}" />
